@@ -6,6 +6,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { RequestLoggerMiddleware } from './common/middleware/request-logger.middleware';
 import { BlogsModule } from './modules/blogs/blogs.module';
+import { SupabaseService } from './common/services/SupabaseService ';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { BlogsModule } from './modules/blogs/blogs.module';
     UsersModule,
     BlogsModule,
   ],
+  providers: [SupabaseService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer): void {
