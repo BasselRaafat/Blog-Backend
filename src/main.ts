@@ -10,7 +10,7 @@ import { Logger } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'http://localhost:5173',
+    origin: 'https://blog-ghv4-1x28em9tc-basselraafats-projects.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // only if you're using cookies/auth headers
   });
