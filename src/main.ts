@@ -16,14 +16,14 @@ async function bootstrap() {
   });
   app.setGlobalPrefix('api');
 
-  const config = new DocumentBuilder().setTitle('Nest E-Commerce').build();
-  const document = SwaggerModule.createDocument(app, config);
-  app.use(
-    '/reference',
-    apiReference({
-      content: document,
-    }),
-  );
+  // const config = new DocumentBuilder().setTitle('Nest E-Commerce').build();
+  // const document = SwaggerModule.createDocument(app, config);
+  // app.use(
+  //   '/reference',
+  //   apiReference({
+  //     content: document,
+  //   }),
+  // );
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
