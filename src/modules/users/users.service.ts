@@ -24,6 +24,7 @@ export class UsersService {
       email: userDto.email,
       name: userDto.name,
       hashedRefreshToken: null,
+      passwordHash: passwordHash,
     });
     const picPath = `profile-pics/${user.id}/${randomUUID()}`;
     const { data, error } = await this.supabaseService
