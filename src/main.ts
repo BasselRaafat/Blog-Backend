@@ -8,7 +8,7 @@ import { Logger } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'https://blog-mu-dun-87.vercel.app',
+    origin: 'blog-mu-dun-87.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // only if you're using cookies/auth headers
   });
